@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: Montserrat, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 0;
     margin-right: 0;
 }
@@ -36,9 +36,14 @@ body {
     padding: 0.5em;
 }
 
-.results {
+#results {
     padding: 0.5em;
     border-top: 1px solid blue;
+}
+
+#results-title-text {
+    text-align: center;
+    font-size: 1.5em;
 }
 
 /* recipe page-specific styling */
