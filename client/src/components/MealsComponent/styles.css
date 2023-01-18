@@ -1,0 +1,7 @@
+.meals-component
+{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}

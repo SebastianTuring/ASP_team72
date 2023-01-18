@@ -1,0 +1,27 @@
+.my-jumbotron
+{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: hover;
+    height:400px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    
+}
+
+.my-jumbotron h1,h2
+{
+    color: antiquewhite;
+ 
+}
+
+
+.button-input
+{   
+    width: 40%;
+    margin-top: 20px;
+    
+}
