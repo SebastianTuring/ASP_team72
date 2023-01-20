@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: Montserrat, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 0;
     margin-right: 0;
 }
@@ -31,14 +31,117 @@ body {
 
 /* searchresults page-specific styling */
 
-.searchbar {
-    margin-top: 3.6em;
-    padding: 0.5em;
+#results-page {
+    background-color: white;
 }
 
-.results {
+#search {
+    margin-top: 3.6em;
     padding: 0.5em;
-    border-top: 1px solid blue;
+    margin-bottom: 0;
+}
+
+#filters {
+    padding-left: 4%;
+    padding-top: 2.0em;
+    padding-bottom: 2.0em;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 2.0em;
+    background-color: #181818;
+}
+
+.filter-text {
+    color: #e0f0ff;
+}
+
+#filter-heading {
+    font-size: 1.2em;
+}
+
+#search-results-heading {
+    font-size: 2.3em;
+    text-align: center;
+    margin-top: 1.0em;
+}
+
+#results-grid {
+    display: grid;
+    margin-left: 4%;
+    margin-right: 4%;
+    column-gap: 4%;
+    row-gap: 4.0em;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #results-grid {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    #results-grid {
+        grid-template-columns: 48% 48%;
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1500px) {
+    #results-grid {
+        grid-template-columns: 30.66% 30.66% 30.66%;
+    }
+}
+
+@media only screen and (min-width: 1501px) {
+    #results-grid {
+        grid-template-columns: 23% 23% 23% 23%;
+    }
+}
+
+.result-link {
+    text-decoration: none;
+}
+
+.result {
+    background-color: #e0f0ff;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.result > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.recipe-info {
+    padding-left: 1.0em;
+    padding-right: 1.0em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    color: black;
+}
+
+.category {
+    padding-top: 1.0em;
+    padding-bottom: 0;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.recipe-name {
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
+    font-size: 1.7em;
+    margin: 0;
+}
+
+.time {
+    padding-top: 0em;
+    padding-bottom: 1.0em;
+    font-size: 0.8em;
+    margin: 0;
 }
 
 /* recipe page-specific styling */
