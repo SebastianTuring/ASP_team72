@@ -7,6 +7,42 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var recipesRouter = require('./routes/recipes');
 
+require('dotenv').config();
+
+const mongoose = require('mongoose');
+main().catch(err => console.log(err));
+
+async function main() {
+  const user = process.env.DB_USER
+  const pw = process.env.DB_PASSWD
+  await mongoose.connect(`mongodb+srv://${user}:${pw}@asp-team72.4dbqihm.mongodb.net/?retryWrites=true&w=majority`);
+
+  const recipeSchema = new mongoose.Schema({
+    title: String,
+    description: String,
+    instruction: String,
+    ingredients: [String],
+    pictures: [String],
+    tags: [String]
+  });
+
+  const Recipe = mongoose.model('Recipe', recipeSchema);
+
+  const pizzaRecipe = new Recipe({ 
+    title: 'Pizza', 
+    description: "Delicious",
+    instruction: "Make a dough and put it in the oven.",
+    ingredients: ["cheese","tomato","flour"],
+    pictures: ["https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg"],
+    tags: ["cheese", "delicious"]
+   });
+
+   await pizzaRecipe.save();
+   const recipes = await Recipe.find();
+   console.log(recipes);
+
+}
+
 var app = express();
 
 // view engine setup
