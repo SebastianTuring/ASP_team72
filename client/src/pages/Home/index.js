@@ -9,8 +9,11 @@ function Home() {
   const {recipes,setRecipes} =useContext(MyContext);
   useEffect(() => {
     axios
-    .get("https://www.therecipedb.com/api/json/v1/1/search.php?f=a")
-    .then(({data}) => setRecipes(data.recipes))
+    .get("https://www.themealdb.com/api/json/v1/1/search.php?f=a")
+    .then(({data}) => {
+      console.log(data);
+      setRecipes(data.meals)
+    })
     .catch((error) => console.log(error));
 
   }, []);
