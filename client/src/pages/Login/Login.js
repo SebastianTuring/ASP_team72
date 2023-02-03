@@ -1,34 +1,40 @@
+import axios from "axios"
 import React,{useState,useContext} from 'react'
 import { MyContext } from '../../context';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import axios from "axios"
+
 
 
 
 function Login() {
-
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
-  const {setUser} =useContext(MyContext);
+  const { setUser } =useContext(MyContext);
 
-  function handleLogin(e)
-  { 
-    e.preventDefault();//does not submit automatic
+  function handleLogin(e){ 
+    e.preventDefault();
     if(!email || !password)
     {
       return alert('please fill out the fields')
     }
-    axios.post('http://localhost:5000/login',{email,password})
-    .then(({data})=>setUser(data))
-    .catch((err)=>console.log(err));
+    axios
+      .post("http://localhost:5000/login",{email,password})
+      .then(({data})=>{
+        localStorage.setItem("token",data.token);
+        setUser(data);
+      })
+      .catch((err)=>console.log(err));
   }
 
   return (
     <Form onSubmit={handleLogin}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} value={email}required/>
+        <Form.Control type="email" placeholder="Enter email" 
+          onChange={(e) => setEmail(e.target.value)} 
+          value={email}
+          required/>
         <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text>
