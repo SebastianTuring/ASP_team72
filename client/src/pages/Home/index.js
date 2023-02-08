@@ -1,23 +1,22 @@
-import {useContext, useEffect} from "react"
 import React from 'react'
-import MyJumbotron from '../../components/Jumbotron'
-import axios from "axios"
-import RecipesComponent from "../../components/RecipesComponent"
+import {useContext, useEffect} from "react"
+import MyMain from '../../components/Main'
+import MealsComponent from "../../components/MealsComponent"
 import { MyContext } from "../../context"
-
+import axios from "axios"
 function Home() {
-  const {recipes,setRecipes} =useContext(MyContext);
+  const {meals,setMeals} =useContext(MyContext);
   useEffect(() => {
     axios
-    .get("https://www.therecipedb.com/api/json/v1/1/search.php?f=a")
-    .then(({data}) => setRecipes(data.recipes))
+    .get("https://www.themealdb.com/api/json/v1/1/search.php?f=a")
+    // .then((res)=>res.json())
+    .then(({data}) => {setMeals(data.meals)})
     .catch((error) => console.log(error));
-
   }, []);
   return (
     <div>
-      <MyJumbotron />
-      <RecipesComponent recipes={recipes} />
+      <MyMain />
+      <MealsComponent meals={meals} />
     </div>
   );
 }

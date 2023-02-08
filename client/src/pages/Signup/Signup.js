@@ -19,8 +19,11 @@ function Signup()
       return alert("please fill out the fields");
     }
     axios
-    .post("http://localhost:5000/users",{email,password})
-    .then(({ data })=>{setUser(data);localStorage.setItem("token",data.token)})
+      .post("http://localhost:5000/users",{email,password})
+      .then(({ data })=>{
+        setUser(data);
+        localStorage.setItem("token",data.token);
+    })
     .catch((err) => console.log(err));
   }
 

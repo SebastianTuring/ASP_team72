@@ -1,4 +1,4 @@
-
+// import { useEffect } from 'react';
 import React from 'react'
 import {Route,BrowserRouter as Router, Switch} from 'react-router-dom';
 import Home from './pages/Home';
@@ -10,33 +10,41 @@ import Signup from './pages/Signup/Signup';
 import { MyContext } from './context';
 import { useContext } from 'react';
 
+import "./fonts/Montserrat-Bold.ttf"
+import "./fonts/Poppins/Poppins-Black.ttf"
+import "./fonts/CantataOne-Regular.ttf"
+// import axios from 'axios';
 
 
-function App() {
-  const {user} = useContext(MyContext)
+function App() 
+{
+  const {user} = useContext(MyContext);
+  // useEffect(() =>{
+  //   axios.post("/auto-login").then(({data})=>setUser(data));
+  // }, []);
   return (
-   
     <Router>
+      <AppNavbar/>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        {!user && (
+          <>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/signup">
+              <Signup />
+            </Route>
+          </>
+        )}
+        
+        <Route>
+          <ErrorPage />
+        </Route>
       
-        <AppNavbar/>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              {!user&&(
-              <>
-                <Route exact path="/login">
-                  <Login />
-                </Route>
-                <Route exact path="/signup">
-                  <Signup />
-                </Route>
-              </>
-              )}
-              <Route>
-                <ErrorPage />
-              </Route>
-            </Switch>
+      </Switch>
     </Router>
   );
 }

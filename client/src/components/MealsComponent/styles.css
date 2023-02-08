@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "main";   /*Can be any text*/
+    src: url("/recipewebsite/src/fonts/Poppins/Poppins-Black.ttf");
+  }
+
+@font-face {
+    font-family: "second";   /*Can be any text*/
+    src: url("/recipewebsite/src/fonts/CantataOne-Regular.ttf") ;
+}
+
+@font-face {
+font-family: "third";   /*Can be any text*/
+src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
+}
+
+.meals-component
+{   
+    
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    font-family: "second";
+    
+}

@@ -6,10 +6,13 @@ export const MyContext = createContext();
 
 function AppContext({children})
 {   
-    const[recipes,setRecipes]=useState([]);
+    const[meals,setMeals]=useState([]);
     const[user,setUser]=useState(null);
-    return <MyContext.Provider value ={{recipes,setRecipes,user,setUser}}>{children}</MyContext.Provider>
-
+    return (
+        <MyContext.Provider value ={{meals,setMeals,user,setUser}}>
+            {children}
+        </MyContext.Provider>
+    );
 
 }
 
