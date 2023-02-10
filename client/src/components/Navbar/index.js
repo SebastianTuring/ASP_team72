@@ -4,8 +4,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { MyContext } from '../../context';
 import { useContext } from 'react';
 
-import './navbar.css'
-
 function AppNavbar() {
   const { user } = useContext(MyContext)
   const titleBarStyle = {

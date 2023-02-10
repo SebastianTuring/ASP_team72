@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import MealModal from "../MealModal"
-import './MealCard.css'
+import './mealCard.css'
 
 
 
