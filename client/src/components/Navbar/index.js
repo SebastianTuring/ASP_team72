@@ -40,12 +40,23 @@ function AppNavbar() {
           <Navbar.Collapse id="basic-navbar-nav">
             {!user && (
               <Nav className="me-auto">
+                
+                <LinkContainer to="/">
+                  <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
+
                 <LinkContainer to="/signup">
                   <Nav.Link>Sign Up</Nav.Link>
                 </LinkContainer>
+
                 <LinkContainer to="/login">
                   <Nav.Link>Login</Nav.Link>
                 </LinkContainer>
+
+                <LinkContainer to="/about_us">
+                  <Nav.Link>About Us</Nav.Link>
+                </LinkContainer>
+
               </Nav>
             )}
           </Navbar.Collapse>
