@@ -4,6 +4,8 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { MyContext } from '../../context';
 import { useContext } from 'react';
 
+import './navbar.css'
+
 function AppNavbar() {
   const { user } = useContext(MyContext)
   const titleBarStyle = {
@@ -31,7 +33,7 @@ function AppNavbar() {
   return (
     // <Navbar bg="light" expand="lg">
     <Navbar style={navBarStyle}>
-      <Container style={titleBarStyle}>
+      <Container style={titleBarStyle} className="navbar_BG">
         <LinkContainer to="/" >
           <Navbar.Brand>QualityFare</Navbar.Brand>
         </LinkContainer>

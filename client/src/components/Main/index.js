@@ -19,8 +19,7 @@ function MyMain()
   }
   return (
     <div className="my-main">
-      <h1>QualityFare</h1>
-      <h1>provide the best recipe.</h1>
+      
       <div className="button-input">
       <InputGroup className="mb-3 ">
           <FormControl
