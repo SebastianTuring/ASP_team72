@@ -33,7 +33,7 @@ function AppNavbar() {
     <Navbar style={navBarStyle}>
       <Container style={titleBarStyle}>
         <LinkContainer to="/" >
-          <Navbar.Brand>QualityFair</Navbar.Brand>
+          <Navbar.Brand>QualityFare</Navbar.Brand>
         </LinkContainer>
         <Container style={menuStyle}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
