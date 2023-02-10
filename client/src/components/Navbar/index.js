@@ -10,7 +10,8 @@ function AppNavbar() {
     justifyContent: 'center',
     position: "fixed",
     top: 0,
-    backgroundColor: "white",
+    // backgroundColor: "white",
+    backgroundColor: "#1fcedb",
     zIndex: 1,
     maxWidth: "100vw",
     padding: 0,
@@ -18,6 +19,7 @@ function AppNavbar() {
   };
   const navBarStyle = {
     width: "100%",
+    backgroundColor: "#1fcedb",
     padding: 0,
     margin: 0,
   }
