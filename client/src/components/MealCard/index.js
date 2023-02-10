@@ -1,10 +1,15 @@
 import React, { useContext } from 'react'
 import { Card } from 'react-bootstrap'
+
 import Button from 'react-bootstrap/Button';
 // import MealModal from "../MealModal"
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { MyContext } from '../../context';
 import { useHistory } from "react-router-dom";
+
+import MealModal from "../MealModal"
+import './mealCard.css'
+
 
 function MealCard({ strMeal, strMealThumb, strInstructions, strCategory }) {
   const history = useHistory()

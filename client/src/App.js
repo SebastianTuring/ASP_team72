@@ -7,7 +7,11 @@ import AppNavbar from './components/Navbar';
 import ErrorPage from './pages/404/404.js';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
+
 import Recipe from './pages/Recipe';
+
+import About_us from './pages/About_Us/About_Us';
+
 import { MyContext } from './context';
 import { useContext } from 'react';
 
@@ -34,11 +38,17 @@ function App() {
             <Route exact path="/login">
               <Login />
             </Route>
+            
             <Route exact path="/signup">
               <Signup />
             </Route>
+
             <Route exact path="/recipe">
               <Recipe />
+            </Route>
+            
+            <Route exact path="/about_Us">
+              <About_us />
             </Route>
           </>
         )}
