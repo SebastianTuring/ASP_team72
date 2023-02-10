@@ -4,10 +4,11 @@ import { MyContext } from '../../context';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-
+import {useHistory} from "react-router-dom"
 
 
 function Login() {
+  const history = useHistory();
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   const { setUser } =useContext(MyContext);
@@ -23,6 +24,7 @@ function Login() {
       .then(({data})=>{
         localStorage.setItem("token",data.token);
         setUser(data);
+        history.replace("/")
       })
       .catch((err)=>console.log(err));
   }

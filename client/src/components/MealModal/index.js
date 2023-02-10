@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function MealModal({title,description,category}) {
+function MealModal({title,description,category,idMeal}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);

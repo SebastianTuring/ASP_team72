@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react'
 import { useContext } from "react"
 import { MyContext } from "../../context"
@@ -6,16 +7,26 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './style.css'
+import MealCard from '../../components/MealCard';
+import { Button } from 'react-bootstrap';
+
 
 function Recipe() {
   const history = useHistory()
+
   const { currentRecipe } = useContext(MyContext);
+
   if (!currentRecipe) {
     history.push("/");
     return
   }
   else {
-    const { strMeal, strMealThumb, strInstructions, strCategory } = currentRecipe
+
+
+    const { strMeal, strMealThumb, strInstructions, strCategory,idMeal={idMeal} } = currentRecipe
+    const {user,setUser} = useContext(MyContext)
+    
+    
     const h2style = { color: "black" }
     const containerStyle = {
       marginTop: "7vh",
@@ -23,6 +34,9 @@ function Recipe() {
     }
     const instructionArray = strInstructions.split('.')
     instructionArray.pop()
+  
+
+
     return (
       <>
         <Container style={containerStyle}>
@@ -31,6 +45,7 @@ function Recipe() {
               <div class="r-image">
                 <img src={strMealThumb}></img>
               </div>
+              
             </Col>
             <Col id="recipe">
               <h1 class="r-name">{strMeal}</h1>
@@ -39,7 +54,9 @@ function Recipe() {
                 <li>Xg ingredient 1 </li>
                 <li>Xg ingredient 2 </li>
                 <li>Xg ingredient 3 </li>
-              </ul> */}
+              </ul> */
+              
+              }
               <h2 style={h2style}>Preparation Steps</h2>
               <ol class="p-list">
                 {instructionArray.map((instruction) => (

@@ -3,9 +3,28 @@ import { Navbar, Container, Nav } from "react-bootstrap"
 import { LinkContainer } from 'react-router-bootstrap';
 import { MyContext } from '../../context';
 import { useContext } from 'react';
+import {useHistory} from 'react-router-dom';
+//import axios from 'axios';
 
 function AppNavbar() {
-  const { user } = useContext(MyContext)
+  const history = useHistory();
+  const { user,setUser } = useContext(MyContext)
+
+  
+  const handleLogout = () =>
+  { 
+
+    //have axios bug so i use fetch instead
+    fetch("http://localhost:5000/logout").then(()=>{
+      localStorage.removeItem("token");
+      setUser(null);
+      history.replace("/")
+    });
+  };
+
+
+
+
   const titleBarStyle = {
     justifyContent: 'center',
     position: "fixed",
@@ -40,20 +59,23 @@ function AppNavbar() {
         <Container style={menuStyle}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            
+
             {!user && (
               <Nav className="me-auto">
-                
-                <LinkContainer to="/">
+              <LinkContainer to="/">
                   <Nav.Link>Home</Nav.Link>
-                </LinkContainer>
-
+              </LinkContainer>
+                
                 <LinkContainer to="/signup">
                   <Nav.Link>Sign Up</Nav.Link>
                 </LinkContainer>
 
                 <LinkContainer to="/login">
                   <Nav.Link>Login</Nav.Link>
-                </LinkContainer>
+                </LinkContainer>{" "}
+
+
 
                 <LinkContainer to="/about_us">
                   <Nav.Link>About Us</Nav.Link>
@@ -61,6 +83,21 @@ function AppNavbar() {
 
               </Nav>
             )}
+            {user && 
+             
+              <Nav className="me-auto">
+                <LinkContainer to="/">
+                  <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
+
+                <LinkContainer to="/my-favorites">
+                    <Nav.Link>Favorites </Nav.Link>
+                </LinkContainer>{" "}
+
+                <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+              </Nav>
+            
+            }
           </Navbar.Collapse>
         </Container>
       </Container>

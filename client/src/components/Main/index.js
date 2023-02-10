@@ -15,7 +15,8 @@ function MyMain()
   function handleSearch(search)
   {
     axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
-    .then(({data}) => setMeals(data.meals))
+    .then((res)=>res.json)
+    .then((data) => setMeals(data.meals))
   }
   return (
     <div className="my-main">

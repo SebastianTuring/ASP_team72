@@ -39,9 +39,4 @@ router.post('/logout',authUser,async(req,res)=>{
 
 })
 
-
-// router.post("/auto-login",authUser,async(req,res)=>{
-//     res.send(req.user);
-// })
-
 module.exports =router;

@@ -21,11 +21,10 @@ import "./fonts/CantataOne-Regular.ttf"
 // import axios from 'axios';
 
 
+
 function App() {
   const { user } = useContext(MyContext);
-  // useEffect(() =>{
-  //   axios.post("/auto-login").then(({data})=>setUser(data));
-  // }, []);
+ 
   return (
     <Router>
       <AppNavbar />
@@ -33,8 +32,11 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
+    
+      
         {!user && (
           <>
+            
             <Route exact path="/login">
               <Login />
             </Route>
@@ -52,6 +54,18 @@ function App() {
             </Route>
           </>
         )}
+
+        {
+          user && 
+          <>
+            <Route exact path="/recipe">
+              <Recipe />
+            </Route>
+          </>
+          
+        }
+
+
 
         <Route>
           <ErrorPage />

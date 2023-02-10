@@ -6,16 +6,16 @@ import Button from 'react-bootstrap/Button';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { MyContext } from '../../context';
 import { useHistory } from "react-router-dom";
-
+import Recipe from '../../pages/Recipe';
 import MealModal from "../MealModal"
 import './mealCard.css'
 
 
-function MealCard({ strMeal, strMealThumb, strInstructions, strCategory }) {
+function MealCard({ strMeal, strMealThumb, strInstructions, strCategory,idMeal }) {
   const history = useHistory()
   const { setCurrentRecipe } = useContext(MyContext);
   const handleClick = () => {
-    setCurrentRecipe({ strMeal, strMealThumb, strInstructions, strCategory })
+    setCurrentRecipe({ strMeal, strMealThumb, strInstructions, strCategory,idMeal })
     history.push("/recipe");
   }
   return (
@@ -28,6 +28,7 @@ function MealCard({ strMeal, strMealThumb, strInstructions, strCategory }) {
           <Button variant="primary" onClick={handleClick}>
             Show details
           </Button>
+          
           {/* <MealModal title={strMeal} description={strInstructions} category={strCategory} /> */}
         </Card.Body>
       </Card>
