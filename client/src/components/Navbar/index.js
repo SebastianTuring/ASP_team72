@@ -54,7 +54,7 @@ function AppNavbar() {
     <Navbar style={navBarStyle}>
       <Container style={titleBarStyle} className="navbar_BG">
         <LinkContainer to="/" >
-          <Navbar.Brand>QualityFare</Navbar.Brand>
+          <Navbar.Brand> PLACEHOLDER </Navbar.Brand>
         </LinkContainer>
         <Container style={menuStyle}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -63,10 +63,17 @@ function AppNavbar() {
 
             {!user && (
               <Nav className="me-auto">
+
               <LinkContainer to="/">
                   <Nav.Link>Home</Nav.Link>
               </LinkContainer>
                 
+                
+                <LinkContainer to="/">
+                  <Nav.Link>QualityFare</Nav.Link>
+                </LinkContainer>
+
+
                 <LinkContainer to="/signup">
                   <Nav.Link>Sign Up</Nav.Link>
                 </LinkContainer>
@@ -89,10 +96,6 @@ function AppNavbar() {
                 <LinkContainer to="/">
                   <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
-
-                <LinkContainer to="/my-favorites">
-                    <Nav.Link>Favorites </Nav.Link>
-                </LinkContainer>{" "}
 
                 <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
               </Nav>
