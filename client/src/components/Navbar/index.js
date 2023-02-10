@@ -35,7 +35,7 @@ function AppNavbar() {
     <Navbar style={navBarStyle}>
       <Container style={titleBarStyle} className="navbar_BG">
         <LinkContainer to="/" >
-          <Navbar.Brand>QualityFare</Navbar.Brand>
+          <Navbar.Brand> PLACEHOLDER </Navbar.Brand>
         </LinkContainer>
         <Container style={menuStyle}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -44,7 +44,7 @@ function AppNavbar() {
               <Nav className="me-auto">
                 
                 <LinkContainer to="/">
-                  <Nav.Link>Home</Nav.Link>
+                  <Nav.Link>QualityFare</Nav.Link>
                 </LinkContainer>
 
                 <LinkContainer to="/signup">
