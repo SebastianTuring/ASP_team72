@@ -9,15 +9,19 @@ import { useHistory } from "react-router-dom";
 import Recipe from '../../pages/Recipe';
 import MealModal from "../MealModal"
 import './mealCard.css'
+import axios from 'axios';
 
-
-function MealCard({ strMeal, strMealThumb, strInstructions, strCategory,idMeal }) {
+function MealCard({ strMeal, strMealThumb, strInstructions, strCategory,idMeal,...ingredientsAndMeasures}) {
   const history = useHistory()
   const { setCurrentRecipe } = useContext(MyContext);
+
   const handleClick = () => {
-    setCurrentRecipe({ strMeal, strMealThumb, strInstructions, strCategory,idMeal })
+
+    setCurrentRecipe({ strMeal, strMealThumb, strInstructions, strCategory,idMeal,...ingredientsAndMeasures})
     history.push("/recipe");
+
   }
+
   return (
     <div className="cards">
 
