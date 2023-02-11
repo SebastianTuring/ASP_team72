@@ -1,9 +1,9 @@
 .my-main {
     /* background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./Sample6.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./bannerHD.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     height: 400px;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ h2 {
 
 
 .button-input {
-    width: 40%;
+    width: 80%;
     margin-top: 20px;
-
 }
+
