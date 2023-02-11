@@ -27,6 +27,7 @@ function Login() {
         history.replace("/")
       })
       .catch((err)=>console.log(err));
+      alert("You are logged in")
   }
 
   return (

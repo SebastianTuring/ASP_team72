@@ -23,11 +23,14 @@ function Signup()
     axios
       .post("http://localhost:5000/users",{email,password})
       .then(({ data })=>{
-        setUser(data);
+        setUser(data)
         localStorage.setItem("token",data.token);
-        history.replace("/")
+        history.replace("/users")
+        
     })
     .catch((err) => console.log(err));
+    alert("You are signed in, Please log in to continue")
+    
   }
 
 

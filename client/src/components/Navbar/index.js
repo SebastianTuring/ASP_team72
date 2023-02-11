@@ -19,7 +19,11 @@ function AppNavbar() {
       localStorage.removeItem("token");
       setUser(null);
       history.replace("/")
-    });
+    }) 
+    alert("Logged out")
+    
+   ;  
+   
   };
 
 
