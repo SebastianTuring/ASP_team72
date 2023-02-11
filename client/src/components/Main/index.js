@@ -14,9 +14,14 @@ function MyMain()
   const{setMeals} = useContext(MyContext)
   function handleSearch(search)
   {
+    // commented bc it does not work as for now (for advanced search maybe?)
+    //axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
+    //.then((res)=>res.json)
+    //.then((data) => setMeals(data.meals))
+
+    // fix suggested by Jerry
     axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
-    .then((res)=>res.json)
-    .then((data) => setMeals(data.meals))
+    .then(({data}) => setMeals(data.meals))
   }
   return (
     <div className="my-main">
