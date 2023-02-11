@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { MyContext } from '../../context';
 import { useContext } from 'react';
 import { useHistory } from "react-router-dom";
+import './style.css'
 function Signup() 
 {
   const history = useHistory();
@@ -31,6 +32,8 @@ function Signup()
 
 
   return (
+    <div class="mainSignup">
+      <h1>Sign Up</h1>
     <Form onSubmit={handleSignup}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -57,6 +60,7 @@ function Signup()
         Submit
       </Button>
     </Form>
+    </div>
   );
 }
 
