@@ -1,3 +1,19 @@
+
+@font-face {
+    font-family: "main";   /*Can be any text*/
+    src: url("/recipewebsite/src/fonts/Poppins/Poppins-Black.ttf");
+  }
+
+@font-face {
+    font-family: "second";   /*Can be any text*/
+    src: url("/recipewebsite/src/fonts/CantataOne-Regular.ttf") ;
+}
+
+@font-face {
+font-family: "third";   /*Can be any text*/
+src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
+}
+
 * {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -24,6 +40,7 @@
 .p-list li {
     padding: 1%;
     font-size: 1.5em;
+    font-family: "main";
 }
 
 .com-section {

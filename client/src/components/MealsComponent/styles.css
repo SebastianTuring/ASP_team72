@@ -21,5 +21,7 @@ src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
     flex-wrap: wrap;
     padding-top: 20px;
     font-family: "second";
+  
+    background-color: aliceblue;
     
 }

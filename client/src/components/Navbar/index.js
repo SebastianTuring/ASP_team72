@@ -19,7 +19,11 @@ function AppNavbar() {
       localStorage.removeItem("token");
       setUser(null);
       history.replace("/")
-    });
+    }) 
+    alert("Logged out")
+    
+   ;  
+   
   };
 
 
@@ -29,11 +33,13 @@ function AppNavbar() {
     justifyContent: 'center',
     position: "fixed",
     top: 0,
+
     // backgroundColor: "white",
+    
     backgroundColor: "#1fcedb",
-    zIndex: 1,
+    zIndex: 10,
     maxWidth: "100vw",
-    padding: 0,
+    padding: 20,
     margin: 0
   };
   const navBarStyle = {
@@ -54,7 +60,7 @@ function AppNavbar() {
     <Navbar style={navBarStyle}>
       <Container style={titleBarStyle} className="navbar_BG">
         <LinkContainer to="/" >
-          <Navbar.Brand> PLACEHOLDER </Navbar.Brand>
+          <Navbar.Brand className='invisible_text'>  </Navbar.Brand>
         </LinkContainer>
         <Container style={menuStyle}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -63,16 +69,10 @@ function AppNavbar() {
 
             {!user && (
               <Nav className="me-auto">
-
-              <LinkContainer to="/">
-                  <Nav.Link>Home</Nav.Link>
-              </LinkContainer>
-                
-                
+  
                 <LinkContainer to="/">
                   <Nav.Link>QualityFare</Nav.Link>
                 </LinkContainer>
-
 
                 <LinkContainer to="/signup">
                   <Nav.Link>Sign Up</Nav.Link>
@@ -81,8 +81,6 @@ function AppNavbar() {
                 <LinkContainer to="/login">
                   <Nav.Link>Login</Nav.Link>
                 </LinkContainer>{" "}
-
-
 
                 <LinkContainer to="/about_us">
                   <Nav.Link>About Us</Nav.Link>
