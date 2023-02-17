@@ -1,7 +1,11 @@
-body {
-    margin-top: 20%;
+.aboutpage {
+    margin-top: 10%;
 }
-
+.member
+{
+    line-height: 30px;
+   list-style: none;
+}
 h2{
     color: red;
 }
