@@ -1,0 +1,35 @@
+.caroline
+{  
+    background-color: beige;
+    display: inline-block;
+    margin:20px 20px 20px 20px;
+    flex-wrap: wrap;
+    height:auto
+    
+}
+
+.caroline h1{
+    font-style: italic;
+    font-size: 20px;
+    
+
+ }
+ 
+.caroline img
+{
+    height: 250px;
+    width: 250px;
+}
+
+.caroline p
+{
+    text-align: center;
+    font-style:oblique;
+    font-weight: 300;
+    text-decoration: solid;
+    text-shadow: 2px;
+    
+    color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0.255);
+
+}

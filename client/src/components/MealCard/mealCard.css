@@ -1,5 +1,13 @@
 
-.cards{
-    margin: 2% 2% 2% 2%;
+.cards
+{ width: 250px;
+  height:210px;
+  margin: 0px 30px 130px 0px;
+
    
-  }
+}
+
+.cards img{
+  height: 190px;
+  width: 250px;
+}

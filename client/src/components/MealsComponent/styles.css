@@ -14,14 +14,41 @@ src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
 }
 
 .meals-component
+{   margin:0 200px 0 320px;
+    display:flex;
+    justify-content:baseline;
+
+    flex-wrap:wrap;
+    direction: ltr;
+    padding-top: 20px;
+    padding-left: 30px;
+    font-family: "second";
+    background-color: aliceblue;
+}
+.whole
+{
+    background-color: bisque;
+   
+}
+
+.imagecarol
 {   
     
-    display:flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    font-family: "second";
-  
-    background-color: aliceblue;
+    width: 0px;
+    height:0px
+}
+
+.imagecarol h2{
+    margin-top: 30px;
+    color: black;
+    font-style: italic;
+    font-size:2rem;
+    margin-left: 20px;
+}
+
+
+.imagecarol h3{
+    margin-top: 30px;
+    margin-left: 20px;
     
 }

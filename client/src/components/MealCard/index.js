@@ -25,7 +25,7 @@ function MealCard({ strMeal, strMealThumb, strInstructions, strCategory,idMeal,.
   return (
     <div className="cards">
 
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ height : '21rem'}}>
         <Card.Img variant="top" src={strMealThumb} />
         <Card.Body>
           <Card.Title>{strMeal}</Card.Title>
