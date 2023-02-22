@@ -13,9 +13,10 @@
   }
   
   .footer ul li a {
-    color: #000;
+    color: #ffffff;
   }
   
-  .footer ul li a:hover {
+  .footer ul li a:hover 
+  {
     color: #999;
   }

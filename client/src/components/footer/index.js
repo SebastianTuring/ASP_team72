@@ -14,9 +14,10 @@ function Footer() {
           </div>
           <div className="col-12 col-md-6">
             <ul className="list-inline">
-              <li className="list-inline-item"><a href="#">Home</a></li>
-              <li className="list-inline-item"><a href="#">About</a></li>
-              <li className="list-inline-item"><a href="#">Contact</a></li>
+              <li className="list-inline-item"><a href="/">Home</a></li>
+              <li className="list-inline-item"><a href="/signup">Signup</a></li>
+              <li className="list-inline-item"><a href="/login">Login</a></li>
+              <li className="list-inline-item"><a href="/about_us">About</a></li>
             </ul>
           </div>
         </div>
