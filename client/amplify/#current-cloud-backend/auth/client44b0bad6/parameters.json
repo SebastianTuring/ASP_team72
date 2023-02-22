@@ -1,0 +1,16 @@
+{
+  "authSelections": "userPoolOnly",
+  "resourceName": "client44b0bad6",
+  "serviceType": "imported",
+  "region": "ap-northeast-1",
+  "requiredAttributes": [
+    "email"
+  ],
+  "passwordPolicyMinLength": 6,
+  "passwordPolicyCharacters": [],
+  "mfaConfiguration": "OFF",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaTypes": []
+}

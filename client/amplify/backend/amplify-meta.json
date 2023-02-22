@@ -1,0 +1,47 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-client-dev-120342-authRole",
+      "UnauthRoleArn": "arn:aws:iam::976643057360:role/amplify-client-dev-120342-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::976643057360:role/amplify-client-dev-120342-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-client-dev-120342-deployment",
+      "UnauthRoleName": "amplify-client-dev-120342-unauthRole",
+      "StackName": "amplify-client-dev-120342",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:976643057360:stack/amplify-client-dev-120342/b1467120-ae6f-11ed-aa22-0aefeeb17a1f",
+      "AmplifyAppId": "d28uce7yt0t9z2"
+    }
+  },
+  "auth": {
+    "client44b0bad6": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "ap-northeast-1_oI02PQkGk",
+        "UserPoolName": "qualityfare-up",
+        "AppClientID": "2lshluhk889l24m1gvo5pun5kt",
+        "AppClientIDWeb": "2lshluhk889l24m1gvo5pun5kt"
+      },
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 6,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "lastPushTimeStamp": "2023-02-17T03:18:12.806Z"
+    }
+  }
+}

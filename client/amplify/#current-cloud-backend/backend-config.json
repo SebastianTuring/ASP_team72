@@ -1,0 +1,11 @@
+{
+  "auth": {
+    "client44b0bad6": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
