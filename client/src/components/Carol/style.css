@@ -3,8 +3,8 @@
     background-color: beige;
     display: inline-block;
     margin:20px 20px 20px 20px;
-    flex-wrap: wrap;
-    height:auto
+
+    height:200px
     
 }
 
@@ -13,6 +13,9 @@
     font-size: 20px;
     
 
+ }
+ .caroline h2{
+   margin-top: 30px;
  }
  
 .caroline img
@@ -33,3 +36,8 @@
     background-color: rgba(0, 0, 0, 0.255);
 
 }
+
+.caroline .fa {
+    font-size: 2em; /* change the value as per your requirement */
+    margin-left: 20px;
+  }

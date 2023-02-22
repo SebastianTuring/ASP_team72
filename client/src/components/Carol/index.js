@@ -51,14 +51,12 @@ function Carol() {
 
     <h2>
           Follow us on
-        </h2>
-        <h3>
-        <FaFacebook width="1rem"/>
-        <FaInstagram />
-        <FaYoutube />
-        <FaTwitterSquare/>
-
-        </h3>
+    </h2>
+    <FaFacebook className="fa"/>
+        <FaInstagram className="fa"/>
+        <FaYoutube className="fa" />
+        <FaTwitterSquare className="fa"/>
+        
 
 
     

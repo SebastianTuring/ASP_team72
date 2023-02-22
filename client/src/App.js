@@ -20,7 +20,7 @@ import "./fonts/Poppins/Poppins-Black.ttf"
 import "./fonts/CantataOne-Regular.ttf"
 // import axios from 'axios';
 
-
+import Footer from './components/footer';
 
 function App() {
   const { user } = useContext(MyContext);
@@ -72,6 +72,7 @@ function App() {
         </Route>
 
       </Switch>
+      <Footer />
     </Router>
   );
 }
