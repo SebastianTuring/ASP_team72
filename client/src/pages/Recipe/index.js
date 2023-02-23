@@ -11,44 +11,46 @@ import './style.css'
 
 function Recipe() {
   const history = useHistory()
-  
-  const {currentRecipe} = useContext(MyContext);
-  
-  
+
+  const { currentRecipe } = useContext(MyContext);
+
+
   if (!currentRecipe) {
     history.push("/");
     return
   }
   else {
-    
-    
-    const { strMeal, strMealThumb, strInstructions,...ingredientsAndMeasures} = currentRecipe
 
-    const ingredients=[];
+
+    const { strMeal, strMealThumb, strInstructions, ...ingredientsAndMeasures } = currentRecipe
+
+    const ingredients = [];
     for (const prop in ingredientsAndMeasures) {
-    if (prop.startsWith("strIngredient")) 
-    {
-      const index = prop.match(/\d+/g)[0];
-      const strIngredient = ingredientsAndMeasures[prop];
-      const strMeasure = ingredientsAndMeasures[`strMeasure${index}`];
+      if (prop.startsWith("strIngredient")) {
+        const index = prop.match(/\d+/g)[0];
+        const strIngredient = ingredientsAndMeasures[prop];
+        const strMeasure = ingredientsAndMeasures[`strMeasure${index}`];
 
-      if (strIngredient && strIngredient.length > 0 && strMeasure && strMeasure.length > 0) {
-        ingredients.push({ strIngredient, strMeasure });
+        if (strIngredient && strIngredient.length > 0 && strMeasure && strMeasure.length > 0) {
+          ingredients.push({ strIngredient, strMeasure });
+        }
+
       }
-      
     }
-    }
-    
+
     const h2style = { color: "black" }
     const containerStyle = {
       marginTop: "7vh",
       marginBottom: 100,
-      
+
     }
 
 
-    const instructionArray = strInstructions.split('.')
-    instructionArray.pop()
+    const instructionArray = strInstructions ? strInstructions.split('.') : ["No instruction available"]
+    if (instructionArray.length > 1) {
+      instructionArray.pop()
+    }
+
 
 
     return (
@@ -59,18 +61,18 @@ function Recipe() {
               <div class="r-image">
                 <img src={strMealThumb}></img>
               </div>
-              
+
             </Col>
             <Col id="recipe">
               <h1 class="r-name">{strMeal}</h1>
-              
+
               <h2 style={h2style}>Ingredients</h2>
               <ol class="p-list">
                 {ingredients.map((ingredient) => (
                   <li>{ingredient.strIngredient} : {ingredient.strMeasure}</li>
                 ))}
               </ol>
-              
+
               <h2 style={h2style}>Preparation Steps</h2>
               <ol class="p-list">
                 {instructionArray.map((instruction) => (
