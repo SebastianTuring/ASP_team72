@@ -36,6 +36,19 @@ function About_Us() {
             <li>
               Takafumi Nakayama
             </li>
+
+          <h3>At QualityFare, we are a team of five passionate individuals who have come together to 
+          bring to you an innovative recipe web application that is set to revolutionize the food 
+          industry. Our mission is to make cooking as easy as possible by providing easy access 
+          to quality and healthy recipes that cater to all dietary needs.</h3>
+
+          <h3>We are constantly innovating and evolving our platform to ensure that you have the best 
+          possible experience. Our team is committed to providing excellent customer service, and 
+          we welcome your feedback and suggestions on how we can make our web application even better.</h3>
+
+          <h3>We hope that you enjoy using QualityFare as much as we enjoy creating it. Let's cook, 
+          share, and eat together!</h3>
+
           </p>
         </Col>
       </Row>
