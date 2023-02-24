@@ -20,11 +20,15 @@ import "./fonts/Poppins/Poppins-Black.ttf"
 import "./fonts/CantataOne-Regular.ttf"
 // import axios from 'axios';
 
+import { Amplify } from 'aws-amplify';
+import awsconfig from './aws-exports';
 import Footer from './components/footer';
+
+Amplify.configure(awsconfig);
 
 function App() {
   const { user } = useContext(MyContext);
- 
+
   return (
     <Router>
       <AppNavbar />
@@ -32,15 +36,15 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-    
-      
+
+
         {!user && (
           <>
-            
+
             <Route exact path="/login">
               <Login />
             </Route>
-            
+
             <Route exact path="/signup">
               <Signup />
             </Route>
@@ -48,7 +52,7 @@ function App() {
             <Route exact path="/recipe">
               <Recipe />
             </Route>
-            
+
             <Route exact path="/about_Us">
               <About_us />
             </Route>
@@ -56,13 +60,13 @@ function App() {
         )}
 
         {
-          user && 
+          user &&
           <>
             <Route exact path="/recipe">
               <Recipe />
             </Route>
           </>
-          
+
         }
 
 
