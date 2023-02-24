@@ -74,6 +74,7 @@ function AppNavbar() {
                   <Nav.Link>QualityFare</Nav.Link>
                 </LinkContainer>
 
+                {/*
                 <LinkContainer to="/signup">
                   <Nav.Link>Sign Up</Nav.Link>
                 </LinkContainer>
@@ -85,6 +86,7 @@ function AppNavbar() {
                 <LinkContainer to="/about_us">
                   <Nav.Link>About Us</Nav.Link>
                 </LinkContainer>
+                */}
 
               </Nav>
             )}

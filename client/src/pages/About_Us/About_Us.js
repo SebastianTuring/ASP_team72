@@ -15,11 +15,10 @@ function About_Us() {
          
           <h2>About Us</h2>
           <p>
-           We are agile software development team (T7G7) from University of London,inspired to provide world-access of splendid recipes
+           We are agile software development Team 72 from University of London,inspired to provide world-access of splendid recipes
           </p>
           <p className="member">
             <h3>Your Web Developers  </h3>
-           
             
             <li>
               Jerry Ying
