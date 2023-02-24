@@ -9,8 +9,6 @@ function Filter() {
     const { setFilter, filter } = useContext(MyContext)
 
     const handleFilterClick = (f) => {
-        console.log("handleFilterClick");
-        console.log(f);
         setFilter(f)
     }
 
