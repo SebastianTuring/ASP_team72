@@ -1,43 +1,60 @@
 .caroline
 {  
     background-color: beige;
-    display: inline-block;
-    margin:20px 20px 20px 20px;
 
-    height:200px
-    
+    margin-top:20px ;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.caroline .carousel-item
+{   
+    background-color: rgba(0, 0, 0, 0.932);
+}
+
+.caroline .container
+{   
+    background-color: black ;
+    width: 400px;
+    height:300px;
 }
 
 .caroline h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     font-size: 20px;
+    text-align: center;
     
 
  }
  .caroline h2{
-   margin-top: 30px;
+  color: black;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
  
-.caroline img
-{
-    height: 250px;
-    width: 250px;
+
+
+.caroline img 
+{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height:400px;
+ 
 }
+
 
 .caroline p
 {
-    text-align: center;
+    
     font-style:oblique;
     font-weight: 300;
     text-decoration: solid;
     text-shadow: 2px;
     
     color: antiquewhite;
-    background-color: rgba(0, 0, 0, 0.255);
+    background-color:  rgba(0, 0, 0, 0.044);
 
 }
 
-.caroline .fa {
-    font-size: 2em; /* change the value as per your requirement */
-    margin-left: 20px;
-  }

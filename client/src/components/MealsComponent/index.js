@@ -6,11 +6,7 @@ import Carol from '../Carol'
 function MealsComponent({ meals }) {
   return (
     <div className="whole">
-      <div className="imagecarol">
-        <Carol />
-
-
-      </div>
+      <h1>Your Recipes</h1>
 
       <div className="meals-component">
         {meals ? meals.map((meal) => (
@@ -18,9 +14,10 @@ function MealsComponent({ meals }) {
 
         )) : <>No recipe available</>}
       </div>
-
+      <Carol />
     </div>
-  );
+
+  )
 }
 
 export default MealsComponent

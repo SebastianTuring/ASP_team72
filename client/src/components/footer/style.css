@@ -20,3 +20,11 @@
   {
     color: #999;
   }
+
+  .fa {
+    
+    font-size: 2em; /* change the value as per your requirement */
+    margin-left:15px;
+    margin-bottom: 20px;
+    
+  }

@@ -1,4 +1,7 @@
+
+
 .filterComponent {
+    width: auto;
     margin-right: auto;
     padding-left: 6%;
     padding-top: 1%;
@@ -9,6 +12,7 @@
 }
 
 .filterItem {
+    font-size: small;
     padding: 0.2%;
     margin-left: 2%;
     border: medium solid #e0f0ff;
@@ -16,6 +20,8 @@
 }
 
 .clickedFilterItem {
+    font-size: small;
+    font-style: oblique;
     padding: 0.2%;
     margin-left: 2%;
     border: medium solid #e0f0ff;
@@ -26,7 +32,12 @@
 
 #filter {
     /* cursor: pointer; */
+    
     margin-right: 3%;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.searchlabel h1{
+    font-size: 15px;
 }

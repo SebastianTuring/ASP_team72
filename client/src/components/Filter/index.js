@@ -14,14 +14,14 @@ function Filter() {
 
     return (
         <div className="filterComponent">
-            <div
+            <div className="searchlabel"
                 // onClick={() => setOpen(!open)}
                 // aria-controls="example-collapse-text"
                 // aria-expanded={open}
                 id="filter"
             >
                 {/* {`SEARCH FILTERS ${open ? "v" : ">"}`} */}
-                SEARCH FILTERS
+                <h1>SEARCH FILTERS</h1>
             </div>
             <div
                 className={filter === "ingredient" ? "clickedFilterItem" : "filterItem"}

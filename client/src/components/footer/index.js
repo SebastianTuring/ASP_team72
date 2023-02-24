@@ -1,6 +1,9 @@
 import React from 'react';
 import './style.css';
-
+import { FaInstagram } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+import { FaTwitterSquare } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Container, Nav } from "react-bootstrap"
 
@@ -24,6 +27,12 @@ function Footer() {
             </ul>
           </div>
         </div>
+
+        <FaFacebook className="fa"/>
+        <FaInstagram className="fa"/>
+        <FaYoutube className="fa" />
+        <FaTwitterSquare className="fa"/>
+        
       </div>
     </footer>
   );
