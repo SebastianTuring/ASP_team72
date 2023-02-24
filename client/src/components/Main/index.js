@@ -65,6 +65,11 @@ function MyMain() {
         .then(({ data }) => loadMeals(data.meals))
     }
   }
+  const handleKeyDown = (e) => {
+    if (e.code === "Enter") {
+      handleSearch("")
+    }
+  }
   return (
     <div className="my-main">
       <div className="button-input">
@@ -75,6 +80,7 @@ function MyMain() {
             aria-describedby="recipe-search-button"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <Button variant="danger" id="recipe-search-button" onClick={handleSearch}>
             Search
