@@ -16,7 +16,6 @@ src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
 .meals-component
 {   
     
-    
     margin:40px 0px 0px 0px;
     display:flex;
     justify-content:center;
@@ -38,4 +37,10 @@ src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.unknown h1
+{   
+    width:3000px;
+
 }
