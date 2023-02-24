@@ -1,0 +1,32 @@
+.filterComponent {
+    margin-right: auto;
+    padding-left: 6%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #181818;
+    color: #e0f0ff;
+    display: flex;
+}
+
+.filterItem {
+    padding: 0.2%;
+    margin-left: 2%;
+    border: medium solid #e0f0ff;
+    cursor: pointer;
+}
+
+.clickedFilterItem {
+    padding: 0.2%;
+    margin-left: 2%;
+    border: medium solid #e0f0ff;
+    cursor: pointer;
+    background-color: #e0f0ff;
+    color: #181818;
+}
+
+#filter {
+    /* cursor: pointer; */
+    margin-right: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+}

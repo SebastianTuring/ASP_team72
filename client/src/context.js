@@ -6,6 +6,7 @@ export const MyContext = createContext();
 
 function AppContext({ children }) {
     const [meals, setMeals] = useState([]);
+    const [filter, setFilter] = useState("");
     const [user, setUser] = useState(null);
     const [currentRecipe, setCurrentRecipe] = useState(null);
     return (
@@ -13,7 +14,8 @@ function AppContext({ children }) {
             {
                 meals, setMeals,
                 user, setUser,
-                currentRecipe, setCurrentRecipe
+                currentRecipe, setCurrentRecipe,
+                filter, setFilter
             }}>
             {children}
         </MyContext.Provider>

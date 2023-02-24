@@ -4,6 +4,7 @@ import MyMain from '../../components/Main'
 import MealsComponent from "../../components/MealsComponent"
 import { MyContext } from "../../context"
 import axios from "axios"
+import Filter from '../../components/Filter'
 function Home() {
   const { meals, setMeals } = useContext(MyContext);
   useEffect(() => {
@@ -24,6 +25,7 @@ function Home() {
   return (
     <div>
       <MyMain />
+      <Filter />
       <MealsComponent meals={meals} />
     </div>
   );
