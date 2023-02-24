@@ -11,8 +11,8 @@ function MyMain() {
 
   const [searchInput, setSearchInput] = useState("");
   const [open, setOpen] = useState(false)
-  const [filter, setFilter] = useState("")
-  const { setMeals } = useContext(MyContext)
+  // const [filter, setFilter] = useState("")
+  const { setMeals, filter } = useContext(MyContext)
 
   function loadMeals(meals) {
     const arr = []
@@ -41,10 +41,10 @@ function MyMain() {
         })
     }
   }
-  function handleChange(e) {
-    setFilter(e.target.value)
-    console.log(e.target.value);
-  }
+  // function handleChange(e) {
+  //   setFilter(e.target.value)
+  //   console.log(e.target.value);
+  // }
   function handleSearch(search) {
     if (filter === "ingredient") {
       axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInput}`)
@@ -70,6 +70,7 @@ function MyMain() {
       handleSearch("")
     }
   }
+
   return (
     <div className="my-main">
       <div className="button-input">
@@ -86,49 +87,7 @@ function MyMain() {
             Search
           </Button>
         </InputGroup>
-        <div style={{ marginRight: "auto" }}>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-controls="example-collapse-text"
-            aria-expanded={open}
-          >
-            Filter
-          </Button>
-          <Collapse in={open}>
-            <div id="example-collapse-text" onChange={handleChange}>
-              <Form.Check
-                inline
-                label="main ingredient"
-                value="ingredient"
-                name="group1"
-                type="radio"
-              />
-              <Form.Check
-                inline
-                label="category"
-                value="category"
-                name="group1"
-                type="radio"
-              />
-              <Form.Check
-                inline
-                label="area"
-                value="area"
-                name="group1"
-                type="radio"
-              />
-              <Form.Check
-                inline
-                label="none"
-                value="none"
-                name="group1"
-                type="radio"
-              />
-            </div>
-          </Collapse>
-        </div>
       </div>
-
     </div>
   )
 }
