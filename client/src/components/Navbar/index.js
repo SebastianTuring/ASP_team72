@@ -6,6 +6,8 @@ import { useContext } from 'react';
 import {useHistory} from 'react-router-dom';
 //import axios from 'axios';
 
+import "./navbar.css";
+
 function AppNavbar() {
   const history = useHistory();
   const { user,setUser } = useContext(MyContext)
@@ -35,8 +37,9 @@ function AppNavbar() {
     top: 0,
 
     // backgroundColor: "white",
-    
     backgroundColor: "#1fcedb",
+    //backgroundColor: "green",
+
     zIndex: 10,
     maxWidth: "100vw",
     padding: 20,
@@ -55,6 +58,7 @@ function AppNavbar() {
     marginRight: 0,
     padding: 0
   }
+  
   return (
     // <Navbar bg="light" expand="lg">
     <Navbar style={navBarStyle}>
@@ -71,7 +75,7 @@ function AppNavbar() {
               <Nav className="me-auto">
   
                 <LinkContainer to="/">
-                  <Nav.Link>QualityFare</Nav.Link>
+                  <Nav.Link className='navHomeButton'>QualityFare</Nav.Link>
                 </LinkContainer>
 
                 {/*
