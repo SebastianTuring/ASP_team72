@@ -4,7 +4,7 @@
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
-    height: 500px;
+    height: 31rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,6 @@
 .my-main h1,
 h2 {
     color: antiquewhite;
-
 }
 
 
