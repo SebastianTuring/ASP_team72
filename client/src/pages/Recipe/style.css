@@ -1,17 +1,19 @@
-
 @font-face {
-    font-family: "main";   /*Can be any text*/
+    font-family: "main";
+    /*Can be any text*/
     src: url("/recipewebsite/src/fonts/Poppins/Poppins-Black.ttf");
-  }
-
-@font-face {
-    font-family: "second";   /*Can be any text*/
-    src: url("/recipewebsite/src/fonts/CantataOne-Regular.ttf") ;
 }
 
 @font-face {
-font-family: "third";   /*Can be any text*/
-src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
+    font-family: "second";
+    /*Can be any text*/
+    src: url("/recipewebsite/src/fonts/CantataOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "third";
+    /*Can be any text*/
+    src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
 }
 
 * {
@@ -24,7 +26,7 @@ src: url("/recipewebsite/src/fonts/Montserrat-Bold.ttf");
 .r-image {
     text-align: center;
     width: 100%;
-    height: 85%;
+    /* height: 85%; */
 }
 
 #recipe {

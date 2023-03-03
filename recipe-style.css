@@ -152,7 +152,7 @@ body {
     position: absolute;
     text-align: center;
     top: 10%;
-    left: 5%;
+    left: 30%;
     background-color: grey;
     width: 35%;
     height: 85%;
@@ -162,8 +162,8 @@ body {
 #recipe {
     position: absolute;
     text-align: left;
-    top: 7%;
-    left: 50%;
+    top: 100%;
+    left: 30%;
     width: 50%;
 }
 
@@ -177,20 +177,7 @@ body {
     font-size: 1.5em;
 }
 
-.com-section {
-    position: absolute;
-    left: 30%;
-    top: 100%;
-    width: 75%;
-    height: 10%;
-}
 
-.sample-com {
-    background-color: lightgray;
-    width: 50%;
-    height: 100%;
-
-}
 
 @media (max-width: 767px) {
     .r-image {
@@ -206,13 +193,4 @@ body {
         width: 80%;
     }
 
-    .com-section {
-        top: 165%;
-        left: 10%;
-        width: 80%;
-    }
-
-    .sample-com {
-        width: 80%;
-    }
 }
