@@ -1,17 +1,7 @@
-# QualityFare
+# QualityFair Client App
 
-## Requirements
-
-### Development
-- nodejs version 16
-- Other versions of node might work but fails for version 12 and the latest version of nodejs
-
-### User Testing 
-- Web browser
-
-## Quick Start
-
-### Setup and Run
-`npm i && cd client && npm i && cd .. && npm run dev`  
-This command should install all the dependencies, start the backend server, and open the browser to show the frontend.
-
+## The app is tested using node version 16
+- Test failed for v12 for building.  
+- For versions >16 OPENSSL security patch, use of react-scripts version 2, and probably more reasons make it complicated to run the app even in local environment. 
+- The dependency problems cause the vercel deployment failure.
+- The reason for failing deployment to github pages seems to be related.
